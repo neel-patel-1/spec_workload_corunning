@@ -1,22 +1,21 @@
 #!/bin/bash
 
 export TEST="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-export SPEC_ROOT=~/spec
+export SPEC_ROOT=/opt/spec
 export SPEC_OUTPUT=$TEST/spec_out
 export BACKGROUND_OUTPUT=$TEST/spec_background
 
 SPEC_CORES=( `seq 1 8` )
 BENCHS=( "lbm_s" "mcf_s" "omnetpp_s" "gcc_r" "cactuBSSN_s" "fotonik3d_s" "perlbench_s" "roms_s" ) #memory intensive workloads
-SPEC_CORES+=( `seq 11 18` )
-BENCHS+=( "lbm_s" "mcf_s" "omnetpp_s" "gcc_r" "cactuBSSN_s" "fotonik3d_s" "perlbench_s" "roms_s" ) #memory intensive workloads
+#SPEC_CORES+=( `seq 11 18` )
+#BENCHS+=( "lbm_s" "mcf_s" "omnetpp_s" "gcc_r" "cactuBSSN_s" "fotonik3d_s" "perlbench_s" "roms_s" ) #memory intensive workloads
 
 export SPEC_LOG=spec_log.txt
 export MON_LOG=mon_log.txt
 
-export QZ_ROOT=$TEST/../QATzip
-export ANTAGONIST=$TEST/../antagonist.sh
+export ANTAGONIST=$TEST/lzbench/lzbench
 export ANTAGONIST_OUTPUT=$TEST/antagonist
-export COMP_CORES=( "9" "19"  )
+export COMP_CORES=( "9" )
 
 export MON_CORE="0" #only check for workload completion and handle experiment termination
 
