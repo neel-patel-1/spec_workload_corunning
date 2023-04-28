@@ -7,9 +7,8 @@ export SPEC_CORE_OUTPUT=$TEST/spec_out/spec_cores
 export BACKGROUND_OUTPUT=$TEST/spec_out/spec_background
 export REPORTABLE=0
 
-SPEC_CORES=( 1 2   3 5   7 8   10 11 )
-BENCHS=("perlbench_s" "perlbench_s" "perlbench_s" "perlbench_s" "perlbench_s" "perlbench_s" "perlbench_s" "perlbench_s")
-#BENCH_ALIASES=("sroms" "sroms" "perlbench_s" "perlbench_s" "sroms" "sroms" "perlbench_s" "perlbench_s")
+SPEC_CORES=( 10 )
+BENCHS=( "lbm_s" )
 export COMP_CORES=( "0" "4" "6" "9" )
 
 export SPEC_LOG=spec_log.txt
