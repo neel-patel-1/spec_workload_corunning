@@ -8,7 +8,7 @@ export BACKGROUND_OUTPUT=$TEST/spec_out/spec_background
 export REPORTABLE=0
 
 SPEC_CORES=( 10 )
-BENCHS=( "lbm_s" )
+BENCHS=( "mcf_s" )
 export COMP_CORES=( "0" "4" "6" "9" )
 
 export SPEC_LOG=spec_log.txt
